@@ -1,27 +1,42 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <Home></Home>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
+import Home from "./components/Home.vue";
 
 export default defineComponent({
   name: "App",
   components: {
-    HelloWorld,
+    Home,
   },
 });
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+/* Modal */
+.modal,
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.overlay {
+  opacity: 0.5;
+  background-color: black;
+}
+.modal-card {
+  position: relative;
+  max-width: 50%;
+  margin: auto;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: white;
+  min-height: 100px;
+  z-index: 10;
+  opacity: 1;
 }
 </style>
